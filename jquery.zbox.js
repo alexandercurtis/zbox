@@ -300,8 +300,8 @@
     sm: function(mx,my)
     {
       function positionMag(evx,evy,evcx,evcy) {
-        var imx = off.left;
-        var imy = off.top;
+        var imx = off.left + ZBox.window.scrollLeft();
+        var imy = off.top + ZBox.window.scrollTop();
         var msx = evx - imx;
         if( typeof zoom_offset !== 'undefined' )
         {
